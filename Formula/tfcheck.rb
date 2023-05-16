@@ -5,20 +5,20 @@
 class Tfcheck < Formula
   desc "Template for go project and tap."
   homepage "https://github.com/itsdalmo/tfcheck"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.0/tfcheck-0.1.0-darwin-amd64.tar.gz"
-      sha256 "333c5e4133c2cf9e62d885e79990b42bdfc12067fa14ef9844a7926a50417a91"
+    if Hardware::CPU.arm?
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-darwin-arm64.tar.gz"
+      sha256 "f97a1551984705abf02d7d1a84713202ee21667ce20eb86a9abcce5573bc5c1e"
 
       def install
         bin.install "tfcheck"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.0/tfcheck-0.1.0-darwin-arm64.tar.gz"
-      sha256 "732a4e5fb58b45b3861b8da44c256a931783b389a9910c35a7750e16ec2d09d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-darwin-amd64.tar.gz"
+      sha256 "59a78d407be2dac9a6919512be663fb9fbaf146924dfc2132d01a05404066bc5"
 
       def install
         bin.install "tfcheck"
@@ -28,16 +28,16 @@ class Tfcheck < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.0/tfcheck-0.1.0-linux-arm64.tar.gz"
-      sha256 "0c1491da21e3060893d64b204d62741e5b855be8294a0735e2212b34de3e19c8"
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-linux-arm64.tar.gz"
+      sha256 "6e503c9ca5f4cffeea3655eadf3bf1840c784b3c5356e5417e0dc190311fa979"
 
       def install
         bin.install "tfcheck"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.0/tfcheck-0.1.0-linux-amd64.tar.gz"
-      sha256 "4ad97deaa5eba8c22414ac95377da96edcaa73197f4e91e7288ad43b3c6e94bb"
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-linux-amd64.tar.gz"
+      sha256 "2cd27c3a5dd8aca891e92f31a4d89fecb9a9deddc061208ef581f15cb6dd9fae"
 
       def install
         bin.install "tfcheck"
