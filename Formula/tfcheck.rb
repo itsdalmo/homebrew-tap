@@ -5,20 +5,20 @@
 class Tfcheck < Formula
   desc "Template for go project and tap."
   homepage "https://github.com/itsdalmo/tfcheck"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-darwin-arm64.tar.gz"
-      sha256 "f97a1551984705abf02d7d1a84713202ee21667ce20eb86a9abcce5573bc5c1e"
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.2/tfcheck-0.1.2-darwin-arm64.tar.gz"
+      sha256 "dad30847f88e10af11c6c02cb6c05866df796d23bbaa06ab013eb4c042988f17"
 
       def install
         bin.install "tfcheck"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-darwin-amd64.tar.gz"
-      sha256 "59a78d407be2dac9a6919512be663fb9fbaf146924dfc2132d01a05404066bc5"
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.2/tfcheck-0.1.2-darwin-amd64.tar.gz"
+      sha256 "da1814e6fad4916d370efce5d254f8958886186d6c99cb29334835a70af70338"
 
       def install
         bin.install "tfcheck"
@@ -27,17 +27,17 @@ class Tfcheck < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-linux-arm64.tar.gz"
-      sha256 "6e503c9ca5f4cffeea3655eadf3bf1840c784b3c5356e5417e0dc190311fa979"
+    if Hardware::CPU.intel?
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.2/tfcheck-0.1.2-linux-amd64.tar.gz"
+      sha256 "a72f040149282207d3416c9593118d8c78246dfe52d443256803d2c71227219d"
 
       def install
         bin.install "tfcheck"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.1/tfcheck-0.1.1-linux-amd64.tar.gz"
-      sha256 "2cd27c3a5dd8aca891e92f31a4d89fecb9a9deddc061208ef581f15cb6dd9fae"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/itsdalmo/tfcheck/releases/download/v0.1.2/tfcheck-0.1.2-linux-arm64.tar.gz"
+      sha256 "cb286fbd70ae3f0d59ee8bbe2f187074fe5d76fdd975c0fbfab6ef55dfdb0977"
 
       def install
         bin.install "tfcheck"
